@@ -2,15 +2,10 @@ package todo.entity;
 
 public class TodoEntity {
 
-    private int id;
     private String todo;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public TodoEntity(String todo) {
+        this.todo = todo;
     }
 
     public String getTodo() {
@@ -23,7 +18,7 @@ public class TodoEntity {
 
     @Override
     public String toString() {
-        return "TodoEntity [id=" + id + ", todo=" + todo + "]";
+        return "{todo : " + todo + "}";
     }
 
 }

@@ -8,7 +8,7 @@ public interface TodoRepository {
 
     Collection<TodoEntity> getAll();
 
-    String add();
+    String add(TodoEntity todo);
 
-    String remove();
+    String remove(int index);
 }
