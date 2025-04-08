@@ -1,11 +1,10 @@
 package todo.view;
 
-import org.junit.jupiter.api.Test;
-
 public class ViewTest {
 
-    @Test
-    void showTodo() {
+    public static void main(String[] args) {
+        View view = new View();
 
+        view.showMenu();
     }
 }
