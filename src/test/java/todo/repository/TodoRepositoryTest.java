@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
@@ -40,7 +41,7 @@ public class TodoRepositoryTest {
     @Test
     void removeTest() {
         TodoRepository todoRepository = new TodoRepositoryImpl();
-        Collection<TodoEntity> todo = new ArrayList<TodoEntity>();
+        List<TodoEntity> todo = new ArrayList<TodoEntity>();
 
         assertEquals(
                 todoRepository.add(new TodoEntity("Test 1")),
@@ -53,10 +54,14 @@ public class TodoRepositoryTest {
         todo.add(new TodoEntity("Test 1"));
         todo.add(new TodoEntity("Test 2"));
 
-        todo.remove(0);
-        todoRepository.remove(0);
+        todo.remove(2 - 1);
+        String responRepoTest = todoRepository.remove(2);
+
+        System.out.println(responRepoTest);
 
         assertEquals(todoRepository.getAll().toString(), todo.toString());
+        System.out.println(todo);
+        System.out.println(todoRepository.getAll());
 
     }
 }
